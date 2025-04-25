@@ -17,7 +17,7 @@
             <option value="outro">Outro</option>
         </select>
         <br>
-        <label>Idade</label>'
+        <label>Idade</label>
         <input type="number" name="idade" [(ngModel)]="idade">
         <br>
         <label>Profissão</label>
@@ -28,6 +28,13 @@
     <hr>
     <br>
     <h2>Dados do Usuário em tempo real</h2>
+    <div *ngIf="nome && email && telefone && genero && idade && profissao; else errorTemplate">
+        <p>Todos os campos estão preenchidos corretamente.</p>
+    </div>
+    <ng-template #errorTemplate>
+        <p style="color: red;" *ngIf="!email.includes('@')">O email deve conter um '@'.</p>
+        <p style="color: red;" *ngIf="!nome || !telefone || !genero || !profissao">Por favor, preencha todos os campos do formulário.</p>
+    </ng-template>
     <div class="view">
         <p><Strong>Nome:</Strong> {{nome}}</p>
         <p><Strong>Email:</Strong> {{email}}</p>
