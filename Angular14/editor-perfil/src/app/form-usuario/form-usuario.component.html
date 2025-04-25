@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Formulário de Edição de Perfil</h2>
+    <form>
+        <label>Nome</label>
+        <input type="text" name="nome" [(ngModel)]="nome">
+        <br>
+        <label>Email</label>
+        <input type="email" name="email" [(ngModel)]="email">
+        <br>
+        <label>Telefone</label>
+        <input type="text" name="telefone" [(ngModel)]="telefone">
+        <br>
+        <label>Gênero</label>
+        <select name="genero" [(ngModel)]="genero">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+        <br>
+        <label>Idade</label>'
+        <input type="number" name="idade" [(ngModel)]="idade">
+        <br>
+        <label>Profissão</label>
+        <input type="text" name="profissao" [(ngModel)]="profissao">
+        <br>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <h2>Dados do Usuário em tempo real</h2>
+    <div class="view">
+        <p><Strong>Nome:</Strong> {{nome}}</p>
+        <p><Strong>Email:</Strong> {{email}}</p>
+        <p><Strong>Telefone:</Strong> {{telefone}}</p>
+        <p><Strong>Gênero:</Strong> {{genero}}</p>
+        <p><Strong>Idade:</Strong> {{idade}}</p>
+        <p><Strong>Profissão:</Strong> {{profissao}}</p>
+    </div>
+</div>
