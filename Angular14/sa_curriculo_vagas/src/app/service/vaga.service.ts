@@ -19,18 +19,18 @@ export class VagaService {
     return this.http.get<Vaga[]>(this.apiUrl);
   }
 
-  //cadastrar
+  //cadastrar(post)
   cadastrarVaga(vaga: Vaga): Observable<Vaga[]>{
     return this.http.post<Vaga[]>(this.apiUrl, vaga);
   }
 
-  //atualizar
+  //atualizar(put)
   atualizarVaga(id: any, vaga: Vaga): Observable<Vaga[]>{
     const urlAtualizar = `${this.apiUrl}/${id}`;
     return this.http.put<Vaga[]>(urlAtualizar, vaga);
   }
 
-  //deletar
+  //deletar(delete)
   removerVaga(id: any): Observable<Vaga[]>{
     const urlDeletar = `${this.apiUrl}/${id}`;
     return this.http.delete<Vaga[]>(urlDeletar)

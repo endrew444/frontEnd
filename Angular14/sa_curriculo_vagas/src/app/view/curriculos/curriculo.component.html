@@ -1,1 +1,14 @@
-<p>curriculo works!</p>
+<section class="lista-vagas">
+  <div *ngFor="let curriculo of curriculos">
+    <div class="card">
+      <img src="assets/img/vagas/{{ curriculo.foto }}" alt="Foto do Currículo" />
+      <div class="card-body">
+        <h5 class="card-title">Código do Currículo: {{ curriculo.id }}</h5>
+        <h5 class="card-title">Nome: {{ curriculo.nome }}</h5>
+        <p class="card-text">Descrição: {{ curriculo.descricao }}</p>
+        <p class="card-text">Pretensão Salarial: R$ {{ curriculo.pretensao }},00</p>
+      </div>
+    </div>
+  </div>
+  <div class="rodape"></div>
+</section>

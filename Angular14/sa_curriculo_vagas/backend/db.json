@@ -24,9 +24,39 @@
     {
       "id": 4,
       "nome": "Gerente de nuvem",
-      "foto": "Foto4.jpg",
+      "foto": "foto4.jpg",
       "descricao": "Vaga de gerente de nuvem",
       "salario": 8500
+    },
+    {
+      "id": 0,
+      "nome": "",
+      "foto": "",
+      "descricao": "",
+      "salario": 0
+    },
+    {
+      "id": 2,
+      "nome": "Desenvolver BackEnd Pleno",
+      "foto": "foto2.jpg",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 7000
+    }
+  ],
+  "curriculos": [
+    {
+      "id": 1,
+      "nome": "Endrew Machado",
+      "foto": "foto1.jpg",
+      "descricao": "Desenvolvedor Frontend com experiência em Angular.",
+      "pretensao": 10000
+    },
+    {
+      "id": 2,
+      "nome": "Maria Souza",
+      "foto": "foto2.jpg",
+      "descricao": "Designer Gráfico e UI/UX.",
+      "pretensao": 3200
     }
   ]
 }
