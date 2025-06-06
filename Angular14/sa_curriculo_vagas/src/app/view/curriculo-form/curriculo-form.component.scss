@@ -1,0 +1,161 @@
+/// Declaração de variáveis em SCSS
+$cor-primaria: #007bff;
+$cor-secundaria: #6c757d;
+$cor-sucesso: #28a745;
+$cor-perigo: #dc3545;
+$cor-hover-sucesso: darken($cor-sucesso, 10%);
+$cor-hover-perigo: darken($cor-perigo, 10%);
+$cor-hover-secundaria: darken($cor-secundaria, 10%);
+
+.form-curriculo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+
+  form {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .form-group {
+      margin-bottom: 1.2rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-size: 1.08rem;
+        font-weight: 600;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #fafafa;
+        transition: border 0.2s;
+        margin-bottom: 0.2rem;
+
+        &:focus {
+          border-color: $cor-primaria;
+          outline: none;
+        }
+      }
+
+      textarea {
+        min-height: 80px;
+        resize: vertical;
+      }
+    }
+
+    img {
+      display: block;
+      margin: 0.5rem 0 1rem 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      max-width: 200px;
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    button,
+    .btn-listar,
+    .btn-excluir {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 0.75rem;
+      margin-bottom: 0.5rem;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    button[type="submit"], .btn-salvar {
+      background-color: $cor-primaria;
+
+      &:hover:enabled {
+        background-color: darken($cor-primaria, 10%);
+      }
+      &:disabled {
+        background-color: #b3d1f7;
+        cursor: not-allowed;
+      }
+    }
+
+    .btn-listar {
+      background-color: $cor-sucesso;
+
+      &:hover {
+        background-color: $cor-hover-sucesso;
+      }
+    }
+
+    .btn-excluir {
+      background-color: $cor-perigo;
+
+      &:hover {
+        background-color: $cor-hover-perigo;
+      }
+    }
+  }
+}
+
+// Estilização da tabela
+.lista-vagas {
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    font-size: 0.97rem;
+    background: #f9f9f9;
+  }
+
+  td,
+  th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+    vertical-align: middle;
+  }
+  thead {
+    background-color: #f1f1f1;
+    th {
+      color: #444;
+      font-weight: bold;
+    }
+  }
+  tbody {
+    tr {
+      transition: background 0.2s;
+      &:hover {
+        background-color: lighten($cor-primaria, 45%);
+      }
+    }
+  }
+}
+
+.rodape {
+  height: 10vh;
+}

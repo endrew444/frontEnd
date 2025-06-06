@@ -1,0 +1,42 @@
+<section class="form-curriculo">
+  <!-- Exibe uma mensagem de feedback ao usuário após salvar ou erro -->
+  <div *ngIf="mensagem" class="alert alert-info text-center">{{ mensagem }}</div>
+  
+  <!-- Formulário para cadastro de currículo -->
+  <form #curriculoForm="ngForm" (ngSubmit)="salvarCurriculo()">
+    <!-- Campo para o nome -->
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" class="form-control" [(ngModel)]="curriculo.nome" required>
+    </div>
+    <!-- Campo para a descrição -->
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" class="form-control" [(ngModel)]="curriculo.descricao" required></textarea>
+    </div>
+    <!-- Campo para pretensão salarial -->
+    <div class="form-group">
+      <label for="pretensao">Pretensão Salarial</label>
+      <input id="pretensao" name="pretensao" type="number" class="form-control" [(ngModel)]="curriculo.pretensao" required>
+    </div>
+    <!-- Campo para línguas faladas -->
+    <div class="form-group">
+      <label for="linguas">Línguas Faladas</label>
+      <textarea id="linguas" name="linguas" class="form-control" [(ngModel)]="curriculo.linguas" required></textarea>
+    </div>
+    <!-- Campo para número de telefone -->
+    <div class="form-group">
+      <label for="telefone">Número de Telefone</label>
+      <input id="telefone" name="telefone" type="tel" class="form-control" [(ngModel)]="curriculo.telefone" required>
+    </div>
+    <!-- Campo para e-mail -->
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" class="form-control" [(ngModel)]="curriculo.email" required>
+    </div>
+    <!-- Botão para submeter o formulário -->
+    <button type="submit" class="btn btn-primary" [disabled]="curriculoForm.invalid">
+      Adicionar currículo
+    </button>
+  </form>
+</section>

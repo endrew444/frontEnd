@@ -1,0 +1,25 @@
+<section class="lista-vagas">
+  <!-- Percorre a lista de currículos e exibe cada um em um card -->
+  <div *ngFor="let curriculo of curriculos">
+    <div class="card">
+      <div class="card-body">
+        <!-- Exibe o código do currículo -->
+        <h5 class="card-title">Código do Currículo: {{ curriculo.id }}</h5>
+        <!-- Exibe o nome do candidato -->
+        <h5 class="card-title">Nome: {{ curriculo.nome }}</h5>
+        <!-- Exibe a descrição do currículo -->
+        <p class="card-text">Descrição: {{ curriculo.descricao }}</p>
+        <!-- Exibe a pretensão salarial -->
+        <p class="card-text">Pretensão Salarial: R$ {{ curriculo.pretensao }},00</p>
+        <!-- Exibe as línguas faladas -->
+        <p class="card-text">Línguas Faladas: {{ curriculo.linguas }}</p>
+        <!-- Exibe o telefone -->
+        <p class="card-text">Telefone: {{ curriculo.telefone }}</p>
+        <!-- Exibe o e-mail -->
+        <p class="card-text">E-mail: {{ curriculo.email }}</p>
+      </div>
+    </div>
+  </div>
+  <!-- Rodapé da lista -->
+  <div class="rodape"></div>
+</section>

@@ -7,30 +7,29 @@ import { Vaga } from '../models/vaga.model';
   providedIn: 'root'
 })
 export class VagaService {
-  //atributo - localhost
+  // URL da API de vagas
   private apiUrl: string = " http://localhost:3010/vagas";
 
+  // Injeta o HttpClient para fazer requisições HTTP
   constructor(private http: HttpClient) { }
 
-  //comunicação CRUD da API (get/post/put/delete)
-
-  //obter a liosta de vagas (GET)
+  // Obtém a lista de vagas (GET)
   getVagas(): Observable<Vaga []> {
     return this.http.get<Vaga[]>(this.apiUrl);
   }
 
-  //cadastrar(post)
+  // Cadastra uma nova vaga (POST)
   cadastrarVaga(vaga: Vaga): Observable<Vaga[]>{
     return this.http.post<Vaga[]>(this.apiUrl, vaga);
   }
 
-  //atualizar(put)
+  // Atualiza uma vaga existente (PUT)
   atualizarVaga(id: any, vaga: Vaga): Observable<Vaga[]>{
     const urlAtualizar = `${this.apiUrl}/${id}`;
     return this.http.put<Vaga[]>(urlAtualizar, vaga);
   }
 
-  //deletar(delete)
+  // Remove uma vaga (DELETE)
   removerVaga(id: any): Observable<Vaga[]>{
     const urlDeletar = `${this.apiUrl}/${id}`;
     return this.http.delete<Vaga[]>(urlDeletar)

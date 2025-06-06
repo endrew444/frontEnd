@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InicioComponent } from './inicio.component';
+import { CurriculosComponent } from './curriculos.component';
 
-// Descreve o grupo de testes para o componente InicioComponent
-describe('InicioComponent', () => {
-  let component: InicioComponent;
-  let fixture: ComponentFixture<InicioComponent>;
+// Descreve o grupo de testes para CurriculosComponent
+describe('CurriculosComponent', () => {
+  let component: CurriculosComponent;
+  let fixture: ComponentFixture<CurriculosComponent>;
 
   // Antes de cada teste, configura o módulo de teste e cria o componente
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [InicioComponent]
+      declarations: [CurriculosComponent]
     });
-    fixture = TestBed.createComponent(InicioComponent);
+    fixture = TestBed.createComponent(CurriculosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

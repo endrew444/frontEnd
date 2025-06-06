@@ -11,25 +11,33 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { PainelVagasComponent } from './view/painel-vagas/painel-vagas.component';
 import { FormsModule } from '@angular/forms';
+import { CurriculoFormComponent } from './view/curriculo-form/curriculo-form.component';
+import { CurriculoListComponent } from './view/curriculo-list/curriculo-list.component';
+import { CurriculosComponent } from './view/curriculos/curriculos.component';
 
 @NgModule({
+  // Declara todos os componentes que pertencem a este módulo
   declarations: [
     AppComponent,
     InicioComponent,
-    CurriculoComponent,
+    CurriculosComponent,
     VagasComponent,
     HeaderComponent,
     FooterComponent,
-    PainelVagasComponent
+    PainelVagasComponent,
+    CurriculoFormComponent,
+    CurriculoListComponent,
+    CurriculosComponent
   ],
+  // Importa módulos necessários para a aplicação funcionar
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    HttpClientModule,
-    FormsModule
+    BrowserModule,      // Necessário para aplicações web Angular
+    AppRoutingModule,   // Módulo de rotas da aplicação
+    NgbModule,          // Módulo do ng-bootstrap para componentes visuais
+    HttpClientModule,   // Permite fazer requisições HTTP
+    FormsModule         // Permite o uso de formulários com ngModel
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [],        // Serviços globais (vazio neste caso)
+  bootstrap: [AppComponent] // Componente raiz que será inicializado
 })
 export class AppModule { }

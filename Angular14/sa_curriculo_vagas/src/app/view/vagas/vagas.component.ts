@@ -8,19 +8,22 @@ import { VagaService } from 'src/app/service/vaga.service';
   styleUrls: ['./vagas.component.scss']
 })
 export class VagasComponent implements OnInit{
-  public vagas: Vaga[] =[]; //vetor para armazenar as vagas
+  // Vetor para armazenar as vagas retornadas da API
+  public vagas: Vaga[] =[];
 
+  // Injetando o serviço de vagas no construtor do componente
   constructor (private _vagasService : VagaService){}
-  // Injetando o serviço de vagas no contrutor do componente
 
+  // Método chamado ao inicializar o componente
   ngOnInit(): void {
     this.listarVagas();
   }
 
+  // Busca todas as vagas no serviço e popula o array de vagas
   listarVagas(){
     this._vagasService.getVagas().subscribe(
       (retornaVaga) => {
-        //mapear os dados da API
+        // Mapeia os dados da API para instâncias do modelo Vaga
         this.vagas = retornaVaga.map(
           (item) => 
             Vaga.fromMap(item)
