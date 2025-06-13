@@ -1,11 +1,13 @@
 /// Declaração de variáveis em SCSS
-$cor-primaria: #007bff;
-$cor-secundaria: #6c757d;
-$cor-sucesso: #28a745;
-$cor-perigo: #dc3545;
-$cor-hover-sucesso: darken($cor-sucesso, 10%);
-$cor-hover-perigo: darken($cor-perigo, 10%);
-$cor-hover-secundaria: darken($cor-secundaria, 10%);
+// Paleta de cores azul clara e moderna
+$cor-primaria: #2196f3;
+$cor-secundaria: #e3f2fd;
+$cor-sucesso: #43a047;
+$cor-perigo: #e53935;
+$cor-fundo: #f5faff;
+$cor-tabela-cabecalho: #e3f2fd;
+$cor-tabela-hover: #bbdefb;
+$cor-card-shadow: rgba(33, 150, 243, 0.10);
 
 .form-curriculo {
   display: flex;
@@ -15,9 +17,9 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
 
   form {
     background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    border: 1.5px solid $cor-primaria;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px $cor-card-shadow;
     padding: 2.5rem 2.5rem 2rem 2.5rem;
     width: 100%;
     max-width: 480px;
@@ -31,7 +33,7 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
       label {
         display: block;
         margin-bottom: 0.5rem;
-        color: #333;
+        color: $cor-primaria;
         font-size: 1.08rem;
         font-weight: 600;
       }
@@ -40,16 +42,17 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
       textarea {
         width: 100%;
         padding: 0.7rem;
-        border: 1px solid #ccc;
+        border: 1px solid $cor-primaria;
         border-radius: 6px;
         font-size: 1rem;
-        background: #fafafa;
-        transition: border 0.2s;
+        background: $cor-secundaria;
+        transition: border 0.2s, box-shadow 0.2s;
         margin-bottom: 0.2rem;
 
         &:focus {
-          border-color: $cor-primaria;
+          border-color: darken($cor-primaria, 10%);
           outline: none;
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.13);
         }
       }
 
@@ -63,7 +66,7 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
       display: block;
       margin: 0.5rem 0 1rem 0;
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      box-shadow: 0 2px 8px $cor-card-shadow;
       max-width: 200px;
       max-height: 200px;
       object-fit: cover;
@@ -88,7 +91,8 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
       background-color: $cor-primaria;
 
       &:hover:enabled {
-        background-color: darken($cor-primaria, 10%);
+        background-color: darken($cor-primaria, 8%);
+        box-shadow: 0 4px 16px $cor-card-shadow;
       }
       &:disabled {
         background-color: #b3d1f7;
@@ -100,7 +104,7 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
       background-color: $cor-sucesso;
 
       &:hover {
-        background-color: $cor-hover-sucesso;
+        background-color: darken($cor-sucesso, 8%);
       }
     }
 
@@ -108,20 +112,20 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
       background-color: $cor-perigo;
 
       &:hover {
-        background-color: $cor-hover-perigo;
+        background-color: darken($cor-perigo, 8%);
       }
     }
   }
 }
 
-// Estilização da tabela
+// Estilização da tabela (se houver)
 .lista-vagas {
   max-width: 1200px;
   margin: 2rem auto 0 auto;
   padding: 1rem;
-  background-color: #fff;
+  background-color: $cor-secundaria;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px $cor-card-shadow;
   overflow-x: auto;
 
   .table {
@@ -136,13 +140,13 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
   th {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #b3e5fc;
     vertical-align: middle;
   }
   thead {
-    background-color: #f1f1f1;
+    background-color: $cor-tabela-cabecalho;
     th {
-      color: #444;
+      color: $cor-primaria;
       font-weight: bold;
     }
   }
@@ -150,7 +154,7 @@ $cor-hover-secundaria: darken($cor-secundaria, 10%);
     tr {
       transition: background 0.2s;
       &:hover {
-        background-color: lighten($cor-primaria, 45%);
+        background-color: $cor-tabela-hover;
       }
     }
   }

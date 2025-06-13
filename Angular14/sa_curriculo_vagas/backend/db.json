@@ -52,7 +52,7 @@
       "pretensao": 3200
     },
     {
-      "id": 0,
+      "id": "0",
       "nome": "Endrew Machado",
       "foto": "currículo foto",
       "descricao": "teste",
@@ -62,13 +62,40 @@
       "email": "endrewmachado59gmail.com"
     },
     {
-      "id": 0,
+      "id": "0",
       "nome": "Julia Oliveira",
       "descricao": "DEV",
       "pretensao": 10000,
       "linguas": "Portugues, ingles, russo e frances",
       "telefone": "19 996713714",
       "email": "juliaoliveilou@gmail.com"
+    },
+    {
+      "id": "0",
+      "nome": "beatriz gabriela barbosa",
+      "descricao": "programdora mobile",
+      "pretensao": 10000,
+      "linguas": "alemão, inglês",
+      "telefone": "19 991065389",
+      "email": "b.beatrizgabrielabarbosa@gmail.com"
+    },
+    {
+      "id": 0,
+      "nome": "Alexandre Machado",
+      "descricao": "Programador mobile",
+      "pretensao": 100000,
+      "linguas": "Português, Inglês e espanhol",
+      "telefone": "19 992371154",
+      "email": "alexandre.machado@gmail.com"
+    },
+    {
+      "id": 0,
+      "nome": "Cida Silva",
+      "descricao": "Gerente de Nuvem com sólida experiência em arquitetura e desenvolvimento de soluções em AWS, Azure e Google Cloud. Especialista em infraestrutura como código (IaC), automação com DevOps, containers (Docker/Kubernetes) e migração de sistemas para a nuvem. Forte atuação em liderança técnica, gestão de equipes ágeis e otimização de ambientes para segurança, desempenho e custo. Profissional com perfil estratégico e mão na massa, voltado à inovação, escalabilidade e eficiência operacional.",
+      "pretensao": 6000000,
+      "linguas": "Portugês, Inglês, Russo, Francês e Mandarim",
+      "telefone": "19 99999999",
+      "email": "Cidasilva@gmail.com"
     }
   ]
 }

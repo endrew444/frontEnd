@@ -1,16 +1,42 @@
+$cor-primaria: #2196f3;
+$cor-secundaria: #e3f2fd;
+$cor-hover: #1976d2;
+$cor-fundo: #f5faff;
+$cor-footer-bg: #1565c0;
+$cor-footer-texto: #e3f2fd;
+
+html, body, app-root {
+  min-height: 100vh;
+  height: 100%;
+}
+
+body, app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5faff;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
 .container {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: $cor-fundo;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(33, 150, 243, 0.08);
 
   h1 {
-    color: #333;
+    color: $cor-primaria;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 0 $cor-secundaria;
 
     @media (max-width: 780px) {
       font-size: 2rem;
@@ -22,10 +48,13 @@
   }
 
   p {
-    color: #555;
+    color: #333;
     font-size: 1.3rem;
     line-height: 1.6;
     text-align: center;
+    background: rgba(33,150,243,0.03);
+    border-radius: 6px;
+    padding: 0.5rem 0;
 
     @media (max-width: 780px) {
       font-size: 1.2rem;
@@ -41,14 +70,34 @@
       font-size: 1.1rem;
       padding: 0.7rem 2rem;
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      background: $cor-primaria;
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.10);
       transition: background 0.2s, box-shadow 0.2s;
 
       &:hover {
-        background: #7c8ceb;
+        background: $cor-hover;
         color: #fff;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+        box-shadow: 0 4px 16px rgba(33, 150, 243, 0.15);
       }
     }
   }
+}
+
+footer, .footer, .app-footer {
+  background: $cor-footer-bg;
+  color: $cor-footer-texto;
+  text-align: center;
+  padding: 1.2rem 0 1.5rem 0;
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
+  border-top: 2px solid $cor-primaria;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(33, 150, 243, 0.10);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
 }

@@ -1,9 +1,24 @@
-.footer{
-    background-color: #666;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+$cor-primaria: #2196f3;
+$cor-footer-bg: #1565c0; // Azul mais escuro
+$cor-footer-texto: #e3f2fd;
+
+footer, .footer, .app-footer {
+  background: $cor-footer-bg;
+  color: $cor-footer-texto;
+  text-align: center;
+  padding: 1.2rem 0 1.5rem 0;
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
+  border-top: 2px solid $cor-primaria;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 8px rgba(33, 150, 243, 0.10);
+
+  a {
+    color: lighten($cor-footer-texto, 10%);
+    text-decoration: underline;
+    transition: color 0.2s;
+    &:hover {
+      color: #fff;
+    }
+  }
 }

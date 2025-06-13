@@ -1,111 +1,129 @@
-///declaração de variáveis em SCSS
-$cor-primaria: #007bff;
-$cor-secundaria: #6c757d;
-$cor-sucesso: #28a745;
-$cor-perigo: #dc3545;
+/// Declaração de variáveis em SCSS para cores claras e modernas
+$cor-primaria: #2196f3; // Azul claro
+$cor-secundaria: #90caf9; // Azul mais claro
+$cor-sucesso: #43a047; // Verde para ações positivas
+$cor-perigo: #e53935; // Vermelho para ações de perigo
+$cor-fundo: #f5faff; // Fundo bem claro
+$cor-tabela-cabecalho: #e3f2fd; // Azul bem claro para cabeçalho de tabela
+$cor-tabela-hover: #bbdefb; // Azul claro para hover
 
 form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(33, 150, 243, 0.08);
 
   label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #444;
-    font-size: 1rem;
+    color: #1976d2;
+    font-size: 1.05rem;
+    font-weight: 600;
   }
-  input {
-    width: calc(100% - 20px);
-    padding: 1rem 10px;
-    margin-bottom: 1.5rem;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.9rem 12px;
+    margin-bottom: 1.2rem;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
     font-size: 1rem;
+    background: $cor-fundo;
+    transition: border 0.2s, box-shadow 0.2s;
 
     &:focus {
       outline: none;
       border-color: $cor-primaria;
-      box-shadow: 0, 0, 0, rgba($color: $cor-primaria, $alpha: 0.25);
+      box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.15);
     }
   }
 
   button {
     padding: 0.8rem 1.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #fff;
     margin-right: 0.75rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+    transition: background 0.2s, box-shadow 0.2s;
 
     &[type="button"]:nth-of-type(1) {
-      //Botão Cadastrar
-      background-color: $cor-secundaria;
+      // Botão Cadastrar
+      background-color: $cor-primaria;
 
       &:hover {
-        background-color: darken($color: $cor-sucesso, $amount: 10%);
+        background-color: darken($cor-primaria, 8%);
+        box-shadow: 0 4px 16px rgba(33, 150, 243, 0.15);
       }
     }
 
     &[type="button"]:nth-of-type(2) {
-      //Botão Atualizar
-      background-color: $cor-secundaria;
+      // Botão Atualizar
+      background-color: #ffd600;
+      color: #333;
 
       &:hover {
-        background-color: darken($color: #ffff00, $amount: 10%);
+        background-color: darken(#ffd600, 8%);
       }
     }
     &[type="button"]:nth-of-type(3) {
-      //Botão Atualizar
-      background-color: $cor-secundaria;
+      // Botão Excluir
+      background-color: $cor-perigo;
 
       &:hover {
-        background-color: darken($color: $cor-perigo, $amount: 10%);
+        background-color: darken($cor-perigo, 8%);
       }
     }
   }
 }
 
-//estilização da TAbela
-
+// Estilização da tabela
 .lista-vagas {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: $cor-fundo;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(33, 150, 243, 0.08);
   overflow-x: auto;
 
   .table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   td,
   th {
-    padding: 12px 15px;
+    padding: 14px 18px;
     text-align: left;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #b3e5fc;
     vertical-align: middle;
   }
   thead {
-    background-color: #999;
+    background-color: $cor-tabela-cabecalho;
     th {
-      color: #444;
+      color: #1976d2;
       font-weight: bold;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
     }
   }
   tbody {
     tr {
+      transition: background 0.2s;
       &:hover {
-        background-color: lighten($color: #999, $amount: 5%);
+        background-color: $cor-tabela-hover;
       }
     }
   }
@@ -115,26 +133,35 @@ form {
   height: 10vh;
 }
 
-btn-listar {
+// Botão listar estilizado
+.btn-listar {
   border: none;
-  background-color: $cor-secundaria;
-  padding: 5px 10px;
+  background-color: $cor-primaria;
+  color: #fff;
+  padding: 7px 16px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  transition: background 0.2s;
 
   &:hover {
-    background-color: darken($color: #ffff00, $amount: 10%);
+    background-color: darken($cor-primaria, 8%);
   }
 }
 
-btn-excluir {
+// Botão excluir estilizado
+.btn-excluir {
   border: none;
-  background-color: $cor-secundaria;
-  padding: 5px 10px;
+  background-color: $cor-perigo;
+  color: #fff;
+  padding: 7px 16px;
   cursor: pointer;
   border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.2s;
 
   &:hover {
-    background-color: darken($color: $cor-perigo, $amount: 10%);
+    background-color: darken($cor-perigo, 8%);
   }
 }
