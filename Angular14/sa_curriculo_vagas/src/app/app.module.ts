@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { CurriculoFormComponent } from './view/curriculo-form/curriculo-form.component';
 import { CurriculoListComponent } from './view/curriculo-list/curriculo-list.component';
 import { CurriculosComponent } from './view/curriculos/curriculos.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   // Declara todos os componentes que pertencem a este módulo
@@ -27,7 +28,8 @@ import { CurriculosComponent } from './view/curriculos/curriculos.component';
     PainelVagasComponent,
     CurriculoFormComponent,
     CurriculoListComponent,
-    CurriculosComponent
+    CurriculosComponent,
+    NavbarComponent
   ],
   // Importa módulos necessários para a aplicação funcionar
   imports: [
