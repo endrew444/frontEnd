@@ -7,7 +7,7 @@ export interface IEquipamento extends Document {
     modelo: string;
     marca: string;
     localizacao: string;
-    status: boolean;
+    status: string;
     numeroSerie: string;
 }
 
@@ -15,7 +15,7 @@ const EquipamentoSchema: Schema<IEquipamento> = new Schema({
     modelo: { type: String, required: true },
     marca: { type: String, required: true },
     localizacao: { type: String, required: true },
-    status: { type: Boolean, required: true, default: true },
+    status: {type:String, enun: ["Ativo","Inativo"],  default: "Ativo"},
     numeroSerie: { type: String, required: true, unique: true }
 });
 

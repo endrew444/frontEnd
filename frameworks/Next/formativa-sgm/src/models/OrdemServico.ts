@@ -8,17 +8,21 @@ export interface IOrdemServico extends Document {
     descricao: string;
     tipoManutencao: string;
     status: string;
-    idTecnico: mongoose.Types.ObjectId; 
-    idEquipamento: mongoose.Types.ObjectId;
+    dataSolicitada: Date,
+    dataFinalizada:Date | null,
+    idTecnico: string; 
+    idEquipamento: string;
 }
 
 const OrdemServicoSchema: Schema<IOrdemServico> = new Schema({
     titulo: { type: String, required: true },
     descricao: { type: String, required: true },
-    tipoManutencao: { type: String, required: true },
-    status: { type: String, required: true, enum: ["Aberta", "Em Andamento", "Finalizada"], default: "Aberta" },
-    idTecnico: { type: mongoose.Schema.Types.ObjectId, ref: "Usuario", required: true },
-    idEquipamento: { type: mongoose.Schema.Types.ObjectId, ref: "Equipamento", required: true }
+    tipoManutencao: { type: String, enum:["preventiva","emergencial","preditiva"], required: true},
+    status: { type: String, required: true, enum: ["Ativo","Inativo"], default: "Ativo" },
+    dataSolicitada: {type: Date, default: Date.now},
+    dataFinalizada: {type: Date, default:null},
+    idTecnico: { type: String, ref: "Usuario", required: true },
+    idEquipamento: { type: String, ref: "Equipamento", required: true }
 }, {
     timestamps: true
 });
