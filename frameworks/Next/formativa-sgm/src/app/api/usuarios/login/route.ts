@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) { // pega as informações do HTML
         const token = jwt.sign(
             {id: usuario._id, nome: usuario.nome, funcao: usuario.funcao},
             JWT_SECRET as string,
-            {expiresIn: "1h"}
+            {expiresIn: "2m"}
         );
         return NextResponse.json({
             success: true,

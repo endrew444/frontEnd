@@ -3,7 +3,7 @@
 import Usuario from "@/models/Usuario";
 import connectMongo from "@/services/mongodb"
 
-const criarAdmin = async () =>{
+export const criarAdmin = async () =>{
     await connectMongo();
     const adminEmail = "admin@admin.com";
     //verificar se usuário já existe

@@ -54,8 +54,8 @@ function (senhaUsuario:string): Promise<boolean>{
 
 //toMap // FromMap
 
-const Usuario: Model<IUsuario> = mongoose.models.User 
-|| mongoose.model<IUsuario>("Usuario", UsuarioSchema);
+const Usuario: Model<IUsuario> = mongoose.models.Usuario
+    || mongoose.model<IUsuario>("Usuario", UsuarioSchema);
 
 
 export default Usuario;

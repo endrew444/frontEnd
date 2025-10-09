@@ -1,9 +1,10 @@
 "use client";
-import { useRouter } from "next/router";
+
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import DashboardTecnico from "../componentes/dashboards/DashboardTecnico";
-import DashboardGerente from "../componentes/dashboards/DashboardGerente";
 import DashboardAdmin from "../componentes/dashboards/DashboardAdmin";
+import DashboardGerente from "../componentes/dashboards/DashboardGerente";
 
  //tela de UI
 
@@ -41,12 +42,12 @@ export default function DashboardPage(){
         }
     }
 
-    //react dom
+    // reactDOM
     return(
         <div>
             <header>
                 <h1>Bem-Vindo</h1>
-                <button onClick={handleLogout}>Logou</button>
+                <button onClick={handleLogout}>Logout</button>
             </header>
             <main>
                 {renderDashboard()}

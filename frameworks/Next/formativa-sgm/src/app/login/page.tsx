@@ -1,6 +1,7 @@
 "use client";
 
-import router, { useRouter } from "next/router";
+
+import  { useRouter } from "next/navigation";
 import { useState } from "react";
 
  //interface do usuário
@@ -43,7 +44,8 @@ export default function LoginPage(){
             
         }
     }
-    
+
+    //REACTDOM
     return(
         <div>
             <form onSubmit={handleSubmit}>
@@ -70,4 +72,6 @@ export default function LoginPage(){
             </form>
         </div>
     )
+    
+
 }
