@@ -1,33 +1,37 @@
-// classe de modelagem de dados para Ordens de Serviço
+//classe para equipamento
 
 import mongoose, { Document, Model, Schema } from "mongoose";
 
-export interface IOrdemServico extends Document {
-    _id: string;
-    titulo: string;
-    descricao: string;
+export interface IOrdemServico extends Document{
+    _id:string;
+    titulo:string;
+    descricao:string;
     tipoManutencao: string;
     status: string;
-    dataSolicitada: Date,
-    dataFinalizada:Date | null,
-    idTecnico: string; 
-    idEquipamento: string;
+    dataSolicitada: Date;
+    dataFinalizada: Date | null;
+    tecnicoId: string;
+    equipamentoId: string;
 }
 
-const OrdemServicoSchema: Schema<IOrdemServico> = new Schema({
-    titulo: { type: String, required: true },
-    descricao: { type: String, required: true },
-    tipoManutencao: { type: String, enum:["preventiva","emergencial","preditiva"], required: true},
-    status: { type: String, required: true, enum: ["Ativo","Inativo"], default: "Ativo" },
-    dataSolicitada: {type: Date, default: Date.now},
-    dataFinalizada: {type: Date, default:null},
-    idTecnico: { type: String, ref: "Usuario", required: true },
-    idEquipamento: { type: String, ref: "Equipamento", required: true }
-}, {
-    timestamps: true
+const OrdemServicoSchema:Schema<IOrdemServico> = new Schema({
+    titulo:{type:String, required: true},
+    descricao:{type:String, required: true},
+    tipoManutencao:{type:String,
+        enum:["preventiva","emergencia","preditiva"],
+        required:true},
+    status: {type:String, 
+            enum: ["ativo","inativo"],
+            default: "ativo"},
+    dataSolicitada:{type: Date, default: Date.now},
+    dataFinalizada:{type: Date, default:null},
+    tecnicoId: {type: String, required: true},
+    equipamentoId: {type: String, required: true},
+
+       
 });
 
-//toMap // FromMap
-const OrdemServico: Model<IOrdemServico> = mongoose.models.OrdemServico || mongoose.model<IOrdemServico>("OrdemServico", OrdemServicoSchema);
+const OrdemServico: Model<IOrdemServico> = mongoose.models.Equipamento 
+|| mongoose.model<IOrdemServico>("OrdemServico",OrdemServicoSchema);
 
 export default OrdemServico;
