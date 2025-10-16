@@ -1,7 +1,6 @@
 import Usuario, { IUsuario } from "@/models/Usuario";
 import connectMongo from "@/services/mongodb"
 
-
 //getAll
 export const getAllUsuario = async() =>{
     await connectMongo();//estabelece conexão com o BD
