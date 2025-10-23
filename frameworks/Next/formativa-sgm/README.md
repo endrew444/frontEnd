@@ -151,3 +151,6 @@ graph TD
     E --> F[DashBoard]
     D --> NÃO --> G[Mensagem de Erro]
     G --> B
+```
+
+- https://www.figma.com/design/1ZAibE3u80pWZvpJ77OZIx/Untitled?node-id=0-1&t=3ze1AVu1pJ2DOcii-1
