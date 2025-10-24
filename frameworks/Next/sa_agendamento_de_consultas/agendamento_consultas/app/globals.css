@@ -1,0 +1,92 @@
+:root {
+  --primary-color: #1a365d; /* Azul escuro */
+  --secondary-color: #2d3748; /* Cinza escuro */
+  --background: #f7fafc; /* Cinza claro */
+  --foreground: #1a202c; /* Preto */
+  --accent: #3182ce; /* Azul médio */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--accent);
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
